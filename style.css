@@ -1,0 +1,145 @@
+:root {
+    --bg-color: #1e1e26;
+    --panel-color: #2d2d3a;
+    --primary-text: #ffffff;
+    --highlight-color: #4db8ff;
+    --error-bg: #e74c3c;
+    --error-text: #ffffff;
+}
+body {
+    background-color: #1e1e26;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#controls {
+    width: 300px;
+    background-color: #2d2d3a;
+    padding: 25px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    z-index: 10;
+    overflow-y: auto;
+}
+
+h2 {
+    color: #4db8ff;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80px;
+    background: #3f3f52;
+    border: 1px solid #555;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #4db8ff;
+    color: #1e1e26;
+}
+
+.btn-add {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#canvas-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1e1e26;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+details {
+    margin-bottom: 15px;
+    background: #2d2d3a;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+summary {
+    font-weight: bold;
+    color: #4db8ff;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: 'v';
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+details[open] summary::after {
+    content: '^';
+}
+
+#custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 260px;
+    max-width: 420px;
+    padding: 16px;
+    background: var(--error-bg);
+    color: var(--error-text);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    z-index: 100;
+    text-align: center;
+}
+
+#custom-alert button {
+    width: auto;
+    min-width: 80px;
+    margin: 12px auto 0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #333333;
+}
